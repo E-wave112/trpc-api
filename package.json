@@ -1,0 +1,29 @@
+{
+  "name": "trpc-starter",
+  "version": "0.0.1",
+  "description": "a starter api using trpc and prisma",
+  "main": "index.ts",
+  "author": "E-wave112",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.8.5",
+    "nodemon": "^2.0.20",
+    "prisma": "^4.4.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "dev:server": "nodemon -e ts -w . -x ts-node ./src/server"
+  },
+  "dependencies": {
+    "@prisma/client": "4.4.0",
+    "@trpc/client": "^10.0.0-proxy-beta.19",
+    "@trpc/server": "^10.0.0-proxy-beta.19",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "trpc-playground": "^0.4.3",
+    "zod": "^3.19.1"
+  }
+}
