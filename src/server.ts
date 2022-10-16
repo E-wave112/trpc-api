@@ -1,10 +1,9 @@
-import * as trpc from '@trpc/server';
-import { TRPCError } from '@trpc/server';
 import * as trpcExpress from '@trpc/server/adapters/express';
 import { expressHandler } from 'trpc-playground/handlers/express';
 import express, { Request, Response, NextFunction} from 'express';
 import {appRouter} from './routers';
 import { createContext } from './middlewares';
+const PORT = process.env.PORT || 7000;
 
 async function start() {
     const trpcApiEndpoint = '/api/trpc'
@@ -35,9 +34,9 @@ async function start() {
             router: appRouter,
         }),
     )
-    app.get('/', (_req, res) => res.send('hello'));
-    app.listen(7000, () => {
-      console.log('listening on port 7000');
+    app.get('/', (_req, res) => res.send('hello there!'));
+    app.listen(PORT, () => {
+      console.log(`listening on port ${PORT}`);
     });
   }
   
