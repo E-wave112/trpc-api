@@ -2,9 +2,9 @@ import * as trpc from '@trpc/server';
 import { TRPCError } from '@trpc/server';
 import * as trpcExpress from '@trpc/server/adapters/express';
 import { expressHandler } from 'trpc-playground/handlers/express';
-import { z } from 'zod';
 import express, { Request, Response, NextFunction} from 'express';
 import {appRouter} from './routers';
+import { createContext } from './middlewares';
 
 async function start() {
     const trpcApiEndpoint = '/api/trpc'
@@ -23,7 +23,7 @@ async function start() {
       trpcApiEndpoint,
       trpcExpress.createExpressMiddleware({
         router: appRouter,
-        // createContext,
+        // createContext
       }),
     );
 
