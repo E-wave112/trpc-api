@@ -1,4 +1,4 @@
-### Trpc API
+## Trpc API
 
 A trpc starter API KIT developed with TRPC, Typescript, Prisma, Express and Postgres.
 
@@ -6,7 +6,7 @@ A trpc starter API KIT developed with TRPC, Typescript, Prisma, Express and Post
 
 ### Prerequisites
 
-- Node.js 14+ (Npm, Yarn)
+- Node.js v14+ (Npm, Yarn)
 - Postgres
 - Prisma
 - Docker installed on your machine
